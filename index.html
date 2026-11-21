@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#102943">
+<meta name="description" content="Smart Center - Home Appliances, Used Appliances and Maintenance Services in Alexandria.">
+<title>Smart Center | سمارت سنتر</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:#102943;
+  --blue:#247DB8;
+  --light:#EAF3F9;
+  --white:#fff;
+  --muted:#687D90;
+  --bg:#F5F8FB;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Cairo',sans-serif;
+  background:var(--bg);
+  color:var(--navy);
+}
+body.en{font-family:'Inter',sans-serif}
+a{text-decoration:none;color:inherit}
+button{font:inherit;cursor:pointer}
+.container{width:min(1160px,90%);margin:auto}
+header{
+  background:#fff;
+  border-bottom:1px solid #e6edf3;
+  position:sticky;top:0;z-index:10;
+}
+.nav{
+  min-height:78px;
+  display:flex;align-items:center;
+  justify-content:space-between;gap:20px;
+}
+.logo{font-size:25px;font-weight:800;letter-spacing:-1px}
+.logo span{color:var(--blue)}
+.navlinks{display:flex;gap:27px;font-size:14px;font-weight:600}
+.navlinks a:hover{color:var(--blue)}
+.lang{
+  background:var(--navy);color:white;
+  border:0;border-radius:7px;padding:9px 17px;
+  font-weight:700;
+}
+.hero{
+  background:linear-gradient(120deg,#102943,#1D5A85);
+  color:white;
+  padding:100px 0;
+  overflow:hidden;
+  position:relative;
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  width:430px;height:430px;
+  border:1px solid #ffffff24;
+  border-radius:50%;
+  top:-190px;left:-100px;
+  box-shadow:0 0 0 55px #ffffff0a,0 0 0 110px #ffffff08;
+}
+.hero-content{max-width:690px;position:relative;z-index:1}
+.tag{
+  color:#9ed4f5;font-size:13px;
+  font-weight:700;letter-spacing:2px;
+}
+.hero h1{
+  font-size:clamp(38px,6vw,64px);
+  line-height:1.35;margin:20px 0;
+}
+.hero p{
+  color:#d9e7f1;line-height:2;
+  font-size:17px;max-width:570px;
+}
+.primary{
+  display:inline-block;background:#fff;color:var(--navy);
+  padding:13px 27px;border-radius:7px;
+  font-weight:800;margin-top:27px;
+  transition:.2s;
+}
+.primary:hover{background:#dceef9;transform:translateY(-2px)}
+.section{padding:85px 0}
+.heading{text-align:center;margin-bottom:42px}
+.heading small{color:var(--blue);font-weight:800;letter-spacing:1px}
+.heading h2{font-size:32px;margin:8px 0}
+.heading p{color:var(--muted);font-size:14px}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:23px;
+}
+.card{
+  background:#fff;border:1px solid #e6edf3;
+  border-radius:13px;padding:30px;
+  transition:.25s;
+}
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 15px 35px #10294312;
+}
+.icon{
+  width:58px;height:58px;
+  display:grid;place-items:center;
+  background:var(--light);border-radius:12px;
+  font-size:27px;margin-bottom:20px;
+}
+.card h3{font-size:19px;margin-bottom:10px}
+.card p{font-size:14px;color:var(--muted);line-height:1.9}
+.about{
+  background:#EAF2F8;
+  padding:75px 0;
+}
+.about-inner{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:50px;align-items:center;
+}
+.about h2{font-size:32px;margin:10px 0}
+.about p{color:#5e7283;line-height:2}
+.about-art{
+  background:linear-gradient(140deg,#102943,#287EB5);
+  color:white;border-radius:17px;
+  min-height:250px;padding:40px;
+  display:flex;flex-direction:column;
+  justify-content:center;align-items:center;
+  text-align:center;
+}
+.about-art strong{font-size:35px}
+.about-art span{color:#c6e5f8}
+.contact{
+  background:var(--navy);color:#fff;
+  text-align:center;padding:75px 0;
+}
+.contact h2{font-size:32px;margin:12px 0}
+.contact p{color:#c7d7e3;line-height:2}
+.contact a{
+  display:inline-block;margin:20px 7px 0;
+  padding:12px 24px;border-radius:7px;
+  background:#fff;color:var(--navy);font-weight:700;
+}
+.contact a.secondary{
+  background:transparent;border:1px solid #ffffff70;color:white;
+}
+footer{
+  background:#0B1D2E;color:#aebdca;
+  text-align:center;padding:22px;font-size:13px;
+}
+@media(max-width:760px){
+ .nav{padding:13px 0;flex-wrap:wrap}
+ .navlinks{order:3;width:100%;justify-content:center;gap:16px;flex-wrap:wrap}
+ .hero{padding:75px 0}
+ .grid{grid-template-columns:1fr}
+ .about-inner{grid-template-columns:1fr}
+ .section{padding:65px 0}
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="container nav">
+  <a class="logo" href="#home">SMART <span>CENTER.</span></a>
+  <nav class="navlinks">
+   <a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+   <a href="#services" data-ar="خدماتنا" data-en="Services">خدماتنا</a>
+   <a href="#about" data-ar="عن المحل" data-en="About">عن المحل</a>
+   <a href="#contact" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
+  </nav>
+  <button class="lang" id="language">English</button>
+ </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+ <div class="container">
+  <div class="hero-content">
+   <div class="tag" data-ar="سمارت سنتر • الإسكندرية" data-en="SMART CENTER • ALEXANDRIA">سمارت سنتر • الإسكندرية</div>
+   <h1 data-ar="حلول ذكية<br>لراحة بيتك." data-en="Smart Solutions<br>For Your Home.">حلول ذكية<br>لراحة بيتك.</h1>
+   <p data-ar="اكتشف الأجهزة المنزلية الجديدة والمستعملة، واستفد من خدمات الصيانة والإصلاح. نحن هنا لمساعدتك في اختيار ما يناسب احتياجاتك." data-en="Explore new and used home appliances and discover our maintenance and repair services. We are here to help you find what suits your needs.">اكتشف الأجهزة المنزلية الجديدة والمستعملة، واستفد من خدمات الصيانة والإصلاح. نحن هنا لمساعدتك في اختيار ما يناسب احتياجاتك.</p>
+   <a href="#services" class="primary" data-ar="اكتشف خدماتنا ←" data-en="Explore Our Services →">اكتشف خدماتنا ←</a>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="services">
+ <div class="container">
+  <div class="heading">
+   <small data-ar="ماذا نقدم؟" data-en="WHAT WE OFFER">ماذا نقدم؟</small>
+   <h2 data-ar="خدماتنا" data-en="Our Services">خدماتنا</h2>
+   <p data-ar="كل ما تحتاجه لمنزلك في مكان واحد" data-en="Everything your home needs, in one place">كل ما تحتاجه لمنزلك في مكان واحد</p>
+  </div>
+  <div class="grid">
+   <article class="card">
+    <div class="icon">🏠</div>
+    <h3 data-ar="أجهزة منزلية جديدة" data-en="New Home Appliances">أجهزة منزلية جديدة</h3>
+    <p data-ar="تعرّف على الأجهزة الجديدة المتاحة لدينا، وتواصل معنا للاستفسار عن التفاصيل والتوافر." data-en="Discover our new home appliances and contact us to ask about product details and availability.">تعرّف على الأجهزة الجديدة المتاحة لدينا، وتواصل معنا للاستفسار عن التفاصيل والتوافر.</p>
+   </article>
+   <article class="card">
+    <div class="icon">♻️</div>
+    <h3 data-ar="أجهزة منزلية مستعملة" data-en="Used Home Appliances">أجهزة منزلية مستعملة</h3>
+    <p data-ar="خيارات متنوعة من الأجهزة المستعملة. اسألنا عن حالة كل جهاز وتفاصيله." data-en="Explore used appliance options. Ask us about each item's condition and details.">خيارات متنوعة من الأجهزة المستعملة. اسألنا عن حالة كل جهاز وتفاصيله.</p>
+   </article>
+   <article class="card">
+    <div class="icon">🛠️</div>
+    <h3 data-ar="الصيانة والإصلاح" data-en="Maintenance & Repair">الصيانة والإصلاح</h3>
+    <p data-ar="خدمات صيانة وإصلاح الأجهزة المنزلية. تواصل معنا لمعرفة الخدمات المتاحة." data-en="Home appliance maintenance and repair services. Contact us to learn more.">خدمات صيانة وإصلاح الأجهزة المنزلية. تواصل معنا لمعرفة الخدمات المتاحة.</p>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="about" id="about">
+ <div class="container about-inner">
+  <div>
+   <small style="color:#247DB8;font-weight:800" data-ar="تعرف علينا" data-en="WHO WE ARE">تعرف علينا</small>
+   <h2 data-ar="مرحبًا بك في Smart Center" data-en="Welcome to Smart Center">مرحبًا بك في Smart Center</h2>
+   <p data-ar="وجهتك للأجهزة المنزلية الجديدة والمستعملة وخدمات الصيانة والإصلاح في الإسكندرية. نحرص على تقديم المعلومات ومساعدتك في الاستفسار عن الخيارات المناسبة لاحتياجاتك." data-en="Your destination for new and used home appliances and maintenance services in Alexandria. We aim to provide clear information and help you explore options that suit your needs.">وجهتك للأجهزة المنزلية الجديدة والمستعملة وخدمات الصيانة والإصلاح في الإسكندرية. نحرص على تقديم المعلومات ومساعدتك في الاستفسار عن الخيارات المناسبة لاحتياجاتك.</p>
+  </div>
+  <div class="about-art">
+   <strong>SMART CENTER</strong>
+   <span data-ar="أجهزة منزلية • صيانة • خدمة" data-en="Home Appliances • Maintenance • Service">أجهزة منزلية • صيانة • خدمة</span>
+  </div>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="container">
+  <small style="color:#9ed4f5;font-weight:800" data-ar="نحن هنا لمساعدتك" data-en="WE ARE HERE TO HELP">نحن هنا لمساعدتك</small>
+  <h2 data-ar="هل لديك استفسار؟" data-en="Have a Question?">هل لديك استفسار؟</h2>
+  <p data-ar="تواصل معنا لمعرفة المزيد عن الأجهزة والخدمات." data-en="Get in touch to learn more about our products and services.">تواصل معنا لمعرفة المزيد عن الأجهزة والخدمات.</p>
+  <a href="https://www.facebook.com/share/1ADL1XfyaC/" target="_blank" rel="noopener" data-ar="صفحتنا على فيسبوك" data-en="Visit Our Facebook Page">صفحتنا على فيسبوك</a>
+  <a class="secondary" href="#services" data-ar="استكشف الخدمات" data-en="Explore Services">استكشف الخدمات</a>
+  <p style="margin-top:25px" data-ar="باب شرقي – الإسكندرية" data-en="Bab Sharqi – Alexandria, Egypt">باب شرقي – الإسكندرية</p>
+ </div>
+</section>
+</main>
+<footer>
+ © 2026 SMART CENTER. <span data-ar="جميع الحقوق محفوظة." data-en="All rights reserved.">جميع الحقوق محفوظة.</span>
+</footer>
+
+<script>
+const button=document.getElementById('language');
+let english=false;
+button.addEventListener('click',()=>{
+ english=!english;
+ document.documentElement.lang=english?'en':'ar';
+ document.documentElement.dir=english?'ltr':'rtl';
+ document.body.classList.toggle('en',english);
+ document.querySelectorAll('[data-ar]').forEach(el=>{
+  el.innerHTML=english?el.dataset.en:el.dataset.ar;
+ });
+ button.textContent=english?'العربية':'English';
+});
+</script>
+</body>
+  </html>
+  
